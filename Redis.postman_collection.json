@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "15026882-fdca-49d0-806e-babbb7b6048a",
+		"name": "Redis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12309833"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/rate-limiter/config",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"manideep\",\r\n    \"limit\": 2,\r\n    \"window\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/rate-limiter/config",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rate-limiter",
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/rate-limiter/redis-token?user=nihaal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rate-limiter/redis-token?user=nihaal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rate-limiter",
+						"redis-token"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "nihaal"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/rate-limiter/config?user=nihaal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rate-limiter/config?user=manideep&algo=sliding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rate-limiter",
+						"config"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "manideep"
+						},
+						{
+							"key": "algo",
+							"value": "sliding"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/rate-limiter/redis-sliding?user=manideep",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rate-limiter/redis-sliding?user=manideep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rate-limiter",
+						"redis-sliding"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "manideep"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/rate-limiter/config?user=nihaal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/rate-limiter/config?user=nihaal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rate-limiter",
+						"config"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "nihaal"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
